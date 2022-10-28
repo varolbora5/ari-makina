@@ -1,50 +1,36 @@
 <script>
-	// @ts-ignore
-	import svelteLogo from "./assets/svelte.svg";
-	import Counter from "./lib/Counter.svelte";
+	import { onMount } from "svelte";
+	import { fly, fade } from "svelte/transition";
+	let load = false;
+	onMount(async () => {
+		load = true;
+	});
 </script>
 
 <main>
-	<div>
-		<!-- svelte-ignore security-anchor-rel-noreferrer -->
-		<a href="https://vitejs.dev" target="_blank">
-			<img src="/vite.svg" class="logo" alt="Vite Logo" />
-		</a>
-		<!-- svelte-ignore security-anchor-rel-noreferrer -->
-		<a href="https://svelte.dev" target="_blank">
-			<img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-		</a>
-	</div>
-	<h1>Vite + Svelte</h1>
+	{#if load}
+		<div in:fly={{ y: 200, duration: 2000 }} out:fade>
+			<h1>Arı Makina</h1>
 
-	<div class="card">
-		<Counter />
-	</div>
-
-	<p>
-		<!-- svelte-ignore security-anchor-rel-noreferrer -->
-		Check out
-		<a href="https://github.com/sveltejs/kit#readme" target="_blank"
-			>SvelteKit</a
-		>, the official Svelte app framework powered by Vite!
-	</p>
-
-	<p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
+			<p class="read-the-docs">Yapım Aşamasında</p>
+			<p class="reach-us">
+				Bize
+				<a href="https://www.gentiger.com.tw/en/">Gentiger sitesinden</a>
+				veya
+				<a href="mailto:email@email.com">e-mailimizden</a>
+				ulaşın
+			</p>
+		</div>
+	{/if}
 </main>
 
 <style>
-	.logo {
-		height: 6em;
-		padding: 1.5em;
-		will-change: filter;
-	}
-	.logo:hover {
-		filter: drop-shadow(0 0 2em #646cffaa);
-	}
-	.logo.svelte:hover {
-		filter: drop-shadow(0 0 2em #ff3e00aa);
+	.reach-us {
+		color: darkgray;
+		font-size: medium;
 	}
 	.read-the-docs {
 		color: #888;
+		font-size: large;
 	}
 </style>
