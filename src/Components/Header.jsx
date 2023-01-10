@@ -1,14 +1,23 @@
 import ari from "../assets/ARI logo.jpg"
 import gentiger from "../assets/GT logo.png"
+import { useMediaQuery } from "react-responsive"
 
-export function Header() {	
+function Header() {	
+
+	let	isMobile = useMediaQuery({ query: `(max-width: 1080px)` })
+
 	return (
-	<header>
-			<div className="flex items-center justify-center text-center m-5">
-				<img src={ari} className="aspect-auto max-w-[10%]" alt="Ari Makina"/>
-				<h1>ARI MAKİNA TAKIM TEZGAHLARI SANAYİ ve TİCARET LTD. ŞTİ.</h1>
-				<img src={gentiger} className="aspect-auto" alt="Gentiger"/>
-			</div>
+	<header className="flex sticky h-auto items-center justify-center text-center px-6">
+
+			<a href="/">
+				<img src={ari} className="aspect-auto w-[110px] py-4" alt="Ari Makina" />
+			</a>	
+			<h1 className="mx-5">{isMobile ? "ARI MAKINA" : "ARI MAKİNA TAKIM TEZGAHLARI SANAYİ ve TİCARET LTD. ŞTİ."}</h1>
+			<a href="https://www.gentiger.com.tw/en/">
+				<img src={gentiger} className="aspect-auto" alt="Gentiger" />
+			</a>
 	</header>
 	)
 }
+
+export default Header
