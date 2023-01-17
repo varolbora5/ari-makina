@@ -517,16 +517,8 @@ video {
   position: sticky;
 }
 
-.left-\[50\%\] {
-  left: 50%;
-}
-
-.right-\[50\%\] {
-  right: 50%;
-}
-
-.left-auto {
-  left: auto;
+.m-auto {
+  margin: auto;
 }
 
 .m-6 {
@@ -535,10 +527,6 @@ video {
 
 .m-5 {
   margin: 1.25rem;
-}
-
-.m-auto {
-  margin: auto;
 }
 
 .mx-5 {
@@ -554,16 +542,8 @@ video {
   margin-top: 0.75rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -636,6 +616,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -646,29 +631,12 @@ video {
   padding-bottom: 1rem;
 }
 
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
 .pt-5 {
   padding-top: 1.25rem;
 }
 
 .pb-3 {
   padding-bottom: 0.75rem;
-}
-
-.pt-7 {
-  padding-top: 1.75rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
-.pl-7 {
-  padding-left: 1.75rem;
 }
 
 .pl-10 {
@@ -683,10 +651,6 @@ video {
   text-align: start;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -694,21 +658,6 @@ video {
 
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
